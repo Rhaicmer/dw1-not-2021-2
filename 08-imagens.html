@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+    <style>
+        /*
+            -#: regras iniciadas com '#' aplica´se apenas aos elementos html com
+                id correspondente
+        */
+        #logo{
+            /*altera a largura*/
+            width: 100%;
+        }
+        #icon{
+            /*altera a altura*/
+            height: 50px;
+        }
+        #publi{
+            /*alinha texto e imagem ao centro*/
+            text-align: center;
+            background-image: url('img/light-carbonfiber.png');
+            /*ajustando espaço interno*/
+            padding: 30px;
+            /*colocando borda*/
+            border: 2px solid white;
+        }
+        /**Essa regra só afeta o figcaption dentro de figure*/
+        #publi figcaption{
+            /*Alterando a fonte*/
+            font-family: "Calibri";
+            font-style: italic;
+        }
+        /*Regra que só vai afetar o img que esta dentro do figure cujo id é publi*/
+        #publi img{
+            /*Arredondar bordas*/
+            border-radius: 10px;
+        }
+        body{
+            /*colocar imagem de fundo no backgroud*/
+            background-image: url("img/metal.jpg");
+        }
+    </style>
+</head>
+<body>
+    <!--
+        <img> usada para exibir as imagens
+            -src :indica a font (source) da imagem, ou em outras palavras
+                  onde está o caminho da imagem que deve ser exibida
+            -alt: especifica um texto alternativo que será exibido no lugar da imagem 
+                  caso a imagem não seja encontrada
+            -id: atributo identifica unicamente o elemento dentro da página html
+            - arial label: prove uma forma de descrever o conteudo para o uso de leitores de tela por deficientes visuais
+    -->
+    <img id="logo"
+         src="img/apptiva-logo.png"
+         alt="Logotipo da empresa Apptiva">
+
+    <img id="icon"
+         src="img/apptiva-icon.png"
+         alt="Icone da empresa Apptiva">
+
+    <!--
+        <figure> representa uma figura formada por uma imagem <img>
+                 e uma legenda <figcaption>
+    -->     
+    <figure id="publi">
+        <img id="imagemGrande"
+             aria-label="Menina com longos cabelos sentada em uma mesa seugurando um lápis e escrevendo no caderno"
+             title="Imagem meramente ilustrativa"
+            src="img/distance-education-1000px.jpg"
+            alt="Educação à Distância">
+        <figcaption>Estudando com a Apptiva, seu futuro é garantido!</figcaption>
+    </figure>
+    <img src="img/svg-logo.svg"
+         alt="Imagem vetorizada"
+         style="width: 200px;">
+
+</body>
+</html>
